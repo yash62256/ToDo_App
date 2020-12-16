@@ -9,10 +9,10 @@ which support:
 Languages/Frameworks used: NodeJS, Postgresql.
 Testing done on POSTMAN.
 
-![WIP Screenshot](screenshot/Image 17-12-20 at 12.03 AM.jpg)
+![WIP screenshot](screenshot/Image 17-12-20 at 12.03 AM.jpg?raw=true)
 
 #Assumptions:
-
+1. W Postgresql installed on your system.
 1. Priority of the todo item will be assigned by user.
 2. Larger the integer, higher the priority.
 3. By default priority will be 1.
