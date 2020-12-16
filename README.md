@@ -7,7 +7,9 @@ which support:
 3. The user is able to prioritize the todos.
 
 Languages/Frameworks used: NodeJS, Postgresql.
+
 Testing done on POSTMAN.
+
 Backend deployed on heroku https://todo-yash.herokuapp.com/todos
 
 ![img](screenshot/img1.jpg)
