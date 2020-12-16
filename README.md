@@ -12,26 +12,49 @@ Testing done on POSTMAN.
 ![img](screenshot/img1.jpg)
 
 #Assumptions:
-1. W Postgresql installed on your system.
-1. Priority of the todo item will be assigned by user.
-2. Larger the integer, higher the priority.
-3. By default priority will be 1.
-4. Items can have same priority.
+1. Postgresql is installed on your system.
+2. By default priority will be 1.
+3. Priority of the todo item can be assigned by user.
+4. Larger the integer, higher the priority.
 5. By default deadline will be 1 month+ date of creation of todo item.
-6. Title of the todo item must be unique.
-7. Port number used is 5500.
+6. Items can have same priority.
+7. Title of the todo item must be unique.
+8. Port number used is 5500.
 
 
 
-For Database Schema and Different route's description visit the link given below:
+##toDoItems Schema
+id  | title | description | isCompleted | priority | deadlineDate | createdAt | updatedAt
 
-https://docs.google.com/document/d/1Jg7sM_hPTzoEaeL3cAXI4r9xYMaH8T1q-7lNqMymZ2s/edit?usp=sharing
 
+#Different routes:
+1. app.get('/todos', toDoController.getTodos)
+    Used to get all the Todos items.
+2. app.get('/todos/incomplete', toDoController.getIncompleteTodos)
+    Used to get all the Todos items which are incomplete.
+3. app.get('/todos/complete', toDoController.getCompleteTodos)
+    Used to get all the Todos which are completed.
+4. app.get('/todos/:title', toDoController.getTodoByTitle)
+    Used to get Todos item using title.
+5. app.get('/todos/priority-filter/:startPriority/:endPriority', toDoController.getTodosByPriorityRange)
+    Used to get all the Todos which are in the priority range mentioned.
+6. app.get('/todos/deadlinedate-range-filter/:startDay/:startMonth/:startYear/:endDay/:endMonth/:endYear', toDoController.getTodosByDeadlineDateRange)
+    Used to get all the Todos which are in the deadline range mentioned.
+8. app.get('/todos/top-priority/:limit', toDoController.getTodosByPriority)
+    Used to get top ‘n’ Todos based on priority.
+9. app.patch('/todos/:title/mark-complete', toDoController.markTodoAsComplete)
+    Used to update Todos item’s ‘isComplete’ attribute to ‘true’.
+10. app.post('/todos', toDoController.createTodo)
+    Used to add a Todos item in the table.
+11. app.delete('/todos/:title',toDoController.deleteTodosbytitle)
+    Used to delete a Todos item from the table using title.
 
 Steps to run application:
-
 1. Make sure you have Postgresql installed on your system.
-2. Create a user, it's password and database, and enter them in files:
+2. Clone the repository.
+3. cd into the cloned repository
+3. run "npm install"
+4. Create a user, it's password and database, and enter them in files:
 
     i.  server.js and   
     ii. toDOItem.js (in models folder)
