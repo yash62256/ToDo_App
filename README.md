@@ -9,7 +9,7 @@ which support:
 Languages/Frameworks used: NodeJS, Postgresql.
 Testing done on POSTMAN.
 
-![img] (screenshot/img1.jpg)
+![img](screenshot/img1.jpg)
 
 #Assumptions:
 1. W Postgresql installed on your system.
