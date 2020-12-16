@@ -11,7 +11,7 @@ Testing done on POSTMAN.
 
 ![img](screenshot/img1.jpg)
 
-#Assumptions:
+# Assumptions:
 1. Postgresql is installed on your system.
 2. By default priority will be 1.
 3. Priority of the todo item can be assigned by user.
@@ -23,11 +23,11 @@ Testing done on POSTMAN.
 
 
 
-##toDoItems Schema
+## toDoItems Schema
 id  | title | description | isCompleted | priority | deadlineDate | createdAt | updatedAt
 
 
-#Different routes:
+# Different routes:
 1. app.get('/todos', toDoController.getTodos)
     Used to get all the Todos items.
 2. app.get('/todos/incomplete', toDoController.getIncompleteTodos)
@@ -49,7 +49,7 @@ id  | title | description | isCompleted | priority | deadlineDate | createdAt | 
 11. app.delete('/todos/:title',toDoController.deleteTodosbytitle)
     Used to delete a Todos item from the table using title.
 
-Steps to run application:
+# Steps to run application:
 1. Make sure you have Postgresql installed on your system.
 2. Clone the repository.
 3. cd into the cloned repository
