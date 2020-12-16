@@ -9,7 +9,7 @@ which support:
 Languages/Frameworks used: NodeJS, Postgresql.
 Testing done on POSTMAN.
 
-
+![title](screenshot/Image 17-12-20 at 12.03 AM.jpg)
 
 #Assumptions:
 
